@@ -1,0 +1,34 @@
+# Plik .gitignore – wyklucza zbędne pliki z repozytorium
+
+# Pobrane pliki MP3 (mogą być duże)
+downloads/
+
+# Środowisko wirtualne Pythona
+venv/
+.venv/
+env/
+
+# Cache Pythona
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Dane IDE
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Pliki systemu operacyjnego
+.DS_Store
+Thumbs.db
+
+# Logi
+*.log
+
+# Pliki tymczasowe spotdl
+.spotdl-cache
