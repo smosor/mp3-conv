@@ -13,6 +13,7 @@ import json
 import re
 from pathlib import Path
 from datetime import datetime
+import sys
 from flask import Flask, request, jsonify, render_template, send_file, abort
 
 # --- Inicjalizacja aplikacji ---
@@ -54,7 +55,7 @@ def run_download(job_id: str, playlist_url: str, output_dir: Path) -> None:
 
     # Komenda spotdl: pobierz playlistę, konwertuj do MP3 320kbps
     cmd = [
-        "spotdl",
+        sys.executable, "-m", "spotdl",
         playlist_url,
         "--output", str(output_dir),
         "--format", "mp3",
